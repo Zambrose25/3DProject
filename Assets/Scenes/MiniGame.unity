@@ -1467,6 +1467,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3774608951414501026, guid: be92c2010d48b0d4b926eed6a5c8f105, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7822732340037997661, guid: be92c2010d48b0d4b926eed6a5c8f105, type: 3}
       propertyPath: m_TagString
       value: Wall
@@ -2925,7 +2929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543919524}
   m_LocalRotation: {x: 0.5413242, y: -0, z: -0, w: 0.840814}
-  m_LocalPosition: {x: -1.9, y: 16.73, z: -4.16}
+  m_LocalPosition: {x: -2.4, y: 17.98, z: -4.72}
   m_LocalScale: {x: 18.975702, y: 18.975704, z: 18.975704}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2980,7 +2984,6 @@ MonoBehaviour:
   Target: {fileID: 984161545}
   Player: {fileID: 1981370824}
   Obstruction: {fileID: 0}
-  xRotation: 0
 --- !u!1001 &1559128583
 PrefabInstance:
   m_ObjectHideFlags: 0

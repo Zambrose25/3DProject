@@ -10,66 +10,20 @@ public class CameraController : MonoBehaviour
     public Transform Target, Player;
     public Transform Obstruction;
 
-    //float mouseX, mouseY;
-    float rotationSpeed = 1;
-
     private Vector3 offset;
-
-    public float xRotation = 0f;
-
 
     // Start is called before the first frame update
     void Start()
     {
         offset = transform.position - player.transform.position;
         Obstruction = Target;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
-        //CameraControl();
         ViewObstructed();
-    }
-
-    void Update()
-    {
-        CameraControlFixed();
-    }
-
-    //void CameraControl()
-    //{
-        //mouseX += mouse.current.delta.X * rotationSpeed;
-        //mouseY -= mouse.current.delta.Y * rotationSpeed;
-        //mouseY = Mathf.Clamp(mouseY, -35, 60);
-
-        //transform.LookAt(Target);
-
-        //if(Input.GetKey(KeyCode.LeftShift))
-        //{
-        //    Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        //}
-       // else
-        //{
-        //    Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-       //     Player.rotation = Quaternion.Euler(0, mouseX, 0);
-       // }
-
-    //}
-
-    void CameraControlFixed()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
-
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        Player.Rotate(Vector3.up * mouseX);
     }
 
     void ViewObstructed()
