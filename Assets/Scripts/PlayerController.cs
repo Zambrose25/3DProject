@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
+    public AudioSource pickupSound;
+
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
+            pickupSound.Play();
         }
     }
 
